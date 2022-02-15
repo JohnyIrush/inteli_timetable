@@ -13,6 +13,7 @@
     import NavBar from '../../Theme/widgets/NavBar.vue' 
     import Body from '../widgets/Body.vue'
     import Sidebar from '../../Theme/widgets/Sidebar.vue'
+    import settings from '../../Theme/plugins/settings.vue'
 
 
     export default defineComponent({
@@ -20,7 +21,8 @@
             Link, 
             NavBar,
             Body,
-            Sidebar
+            Sidebar,
+            settings
         },
     })
 </script>
