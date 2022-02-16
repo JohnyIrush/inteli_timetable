@@ -21,90 +21,15 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
+                    <tr v-for="venue in venues" :index="index">
                       <td>
-                        Class 1 Room
+                        {{ venue.venue }}
                       </td>
                       <td class="align-middle text-center text-sm">
-                         Form 1, Form 2, Form 3
+                         {{ venue.level_id }}
                       </td>
                       <td class="align-middle">
-                        GPS
-                      </td>
-                      <td class="align-middle">
-                       <div class="col-lg-6 col-5 my-auto text-end">
-                         <div class="dropdown float-lg-end pe-4">
-                           <a class="cursor-pointer" id="dropdownTable" data-bs-toggle="dropdown" aria-expanded="false">
-                             <i class="fa fa-ellipsis-h text-secondary"></i>
-                           </a>
-                           <ul class="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5" aria-labelledby="dropdownTable">
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Another action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else here</a></li>
-                           </ul>
-                         </div>
-                       </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Class 2 Room
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                         Form 1, Form 2, Form 3
-                      </td>
-                      <td class="align-middle">
-                        GPS
-                      </td>
-                      <td class="align-middle">
-                       <div class="col-lg-6 col-5 my-auto text-end">
-                         <div class="dropdown float-lg-end pe-4">
-                           <a class="cursor-pointer" id="dropdownTable" data-bs-toggle="dropdown" aria-expanded="false">
-                             <i class="fa fa-ellipsis-h text-secondary"></i>
-                           </a>
-                           <ul class="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5" aria-labelledby="dropdownTable">
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Another action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else here</a></li>
-                           </ul>
-                         </div>
-                       </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Class 3 Room
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                         Form 1, Form 2, Form 3
-                      </td>
-                      <td class="align-middle">
-                        GPS
-                      </td>
-                      <td class="align-middle">
-                       <div class="col-lg-6 col-5 my-auto text-end">
-                         <div class="dropdown float-lg-end pe-4">
-                           <a class="cursor-pointer" id="dropdownTable" data-bs-toggle="dropdown" aria-expanded="false">
-                             <i class="fa fa-ellipsis-h text-secondary"></i>
-                           </a>
-                           <ul class="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5" aria-labelledby="dropdownTable">
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Another action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else here</a></li>
-                           </ul>
-                         </div>
-                       </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Class 4 Room
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                         Form 1, Form 2, Form 4
-                      </td>
-                      <td class="align-middle">
-                        GPS
+                        {{ venue.location }}
                       </td>
                       <td class="align-middle">
                        <div class="col-lg-6 col-5 my-auto text-end">
@@ -137,6 +62,27 @@
     export default defineComponent({
         components: {
 
+        },
+
+        data() {
+            return {
+              venues: {}
+            }
+        },
+        methods: {
+          getVenues()
+          {
+            axios.get('venues')
+            .then((response)=>{
+              this.venues = response.data;
+              //console.log(response.data);
+            })
+          }
+        },
+
+        mounted()
+        {
+          this.getVenues();
         },
     })
 </script>

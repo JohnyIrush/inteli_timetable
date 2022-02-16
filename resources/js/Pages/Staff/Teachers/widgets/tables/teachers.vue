@@ -22,214 +22,18 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
+                    <tr v-for="teacher in teachers" :index="index">
                       <td class="align-middle text-center text-sm">
-                         Chepkuon
+                         {{ teacher.teacher }}
                       </td>
                       <td>
-                        Mathematics
+                        {{ teacher.department_id }}
                       </td>
                       <td>
-                        Mathematics
+                        {{ teacher.subject_id }}
                       </td>
                       <td class="align-middle">
-                        Form 1, Form 2, Form 3, Form 4
-                      </td>
-                      <td class="align-middle">
-                       <div class="col-lg-6 col-5 my-auto text-end">
-                         <div class="dropdown float-lg-end pe-4">
-                           <a class="cursor-pointer" id="dropdownTable" data-bs-toggle="dropdown" aria-expanded="false">
-                             <i class="fa fa-ellipsis-h text-secondary"></i>
-                           </a>
-                           <ul class="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5" aria-labelledby="dropdownTable">
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Another action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else here</a></li>
-                           </ul>
-                         </div>
-                       </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="align-middle text-center text-sm">
-                         Walter White
-                      </td>
-                      <td>
-                        Science
-                      </td>
-                      <td>
-                        Chemistry
-                      </td>
-                      <td class="align-middle">
-                        Form 1, Form 2, Form 3, Form 4
-                      </td>
-                      <td class="align-middle">
-                       <div class="col-lg-6 col-5 my-auto text-end">
-                         <div class="dropdown float-lg-end pe-4">
-                           <a class="cursor-pointer" id="dropdownTable" data-bs-toggle="dropdown" aria-expanded="false">
-                             <i class="fa fa-ellipsis-h text-secondary"></i>
-                           </a>
-                           <ul class="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5" aria-labelledby="dropdownTable">
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Another action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else here</a></li>
-                           </ul>
-                         </div>
-                       </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="align-middle text-center text-sm">
-                         Laurence Krauss
-                      </td>
-                      <td>
-                        Science
-                      </td>
-                      <td>
-                        Physics
-                      </td>
-                      <td class="align-middle">
-                        Form 1, Form 2, Form 3, Form 4
-                      </td>
-                      <td class="align-middle">
-                       <div class="col-lg-6 col-5 my-auto text-end">
-                         <div class="dropdown float-lg-end pe-4">
-                           <a class="cursor-pointer" id="dropdownTable" data-bs-toggle="dropdown" aria-expanded="false">
-                             <i class="fa fa-ellipsis-h text-secondary"></i>
-                           </a>
-                           <ul class="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5" aria-labelledby="dropdownTable">
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Another action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else here</a></li>
-                           </ul>
-                         </div>
-                       </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="align-middle text-center text-sm">
-                         Abdul Barri
-                      </td>
-                      <td>
-                        Applied
-                      </td>
-                      <td>
-                        Computer Studies
-                      </td>
-                      <td class="align-middle">
-                        Form 1, Form 2, Form 3, Form 4
-                      </td>
-                      <td class="align-middle">
-                       <div class="col-lg-6 col-5 my-auto text-end">
-                         <div class="dropdown float-lg-end pe-4">
-                           <a class="cursor-pointer" id="dropdownTable" data-bs-toggle="dropdown" aria-expanded="false">
-                             <i class="fa fa-ellipsis-h text-secondary"></i>
-                           </a>
-                           <ul class="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5" aria-labelledby="dropdownTable">
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Another action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else here</a></li>
-                           </ul>
-                         </div>
-                       </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="align-middle text-center text-sm">
-                         Richard Dawkins
-                      </td>
-                      <td>
-                        Science
-                      </td>
-                      <td>
-                        Biology
-                      </td>
-                      <td class="align-middle">
-                        Form 1, Form 2, Form 3, Form 4
-                      </td>
-                      <td class="align-middle">
-                       <div class="col-lg-6 col-5 my-auto text-end">
-                         <div class="dropdown float-lg-end pe-4">
-                           <a class="cursor-pointer" id="dropdownTable" data-bs-toggle="dropdown" aria-expanded="false">
-                             <i class="fa fa-ellipsis-h text-secondary"></i>
-                           </a>
-                           <ul class="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5" aria-labelledby="dropdownTable">
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Another action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else here</a></li>
-                           </ul>
-                         </div>
-                       </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="align-middle text-center text-sm">
-                         Neil deGrasse
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                         Humanities
-                      </td>
-                      <td>
-                        Geography
-                      </td>
-                      <td class="align-middle">
-                        Form 1, Form 2, Form 3, Form 4
-                      </td>
-                      <td class="align-middle">
-                       <div class="col-lg-6 col-5 my-auto text-end">
-                         <div class="dropdown float-lg-end pe-4">
-                           <a class="cursor-pointer" id="dropdownTable" data-bs-toggle="dropdown" aria-expanded="false">
-                             <i class="fa fa-ellipsis-h text-secondary"></i>
-                           </a>
-                           <ul class="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5" aria-labelledby="dropdownTable">
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Another action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else here</a></li>
-                           </ul>
-                         </div>
-                       </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="align-middle text-center text-sm">
-                         Dr. Paul Dobransky
-                      </td>
-                      <td>
-                        Science
-                      </td>
-                      <td>
-                        Psychology
-                      </td>
-                      <td class="align-middle">
-                        Form 1, Form 2, Form 3, Form 4
-                      </td>
-                      <td class="align-middle">
-                       <div class="col-lg-6 col-5 my-auto text-end">
-                         <div class="dropdown float-lg-end pe-4">
-                           <a class="cursor-pointer" id="dropdownTable" data-bs-toggle="dropdown" aria-expanded="false">
-                             <i class="fa fa-ellipsis-h text-secondary"></i>
-                           </a>
-                           <ul class="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5" aria-labelledby="dropdownTable">
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Another action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else here</a></li>
-                           </ul>
-                         </div>
-                       </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="align-middle text-center text-sm">
-                         Eminem
-                      </td>
-                      <td>
-                        Applied
-                      </td>
-                      <td>
-                        Music
-                      </td>
-                      <td class="align-middle">
-                        Form 1, Form 2, Form 3, Form 4
+                        {{ teacher.level_id }}
                       </td>
                       <td class="align-middle">
                        <div class="col-lg-6 col-5 my-auto text-end">
@@ -262,6 +66,25 @@
     export default defineComponent({
         components: {
 
+        },
+        data() {
+            return {
+              teachers: {}
+            }
+        },
+        methods: {
+          getTeachers()
+          {
+            axios.get('teachers')
+            .then((response)=>{
+              this.teachers = response.data;
+              //console.log(response.data);
+            })
+          }
+        },
+
+        mounted() {
+          this.getTeachers();
         },
     })
 </script>

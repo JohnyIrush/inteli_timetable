@@ -21,90 +21,15 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
+                    <tr v-for="session in sessions" :index="index">
                       <td>
-                        Morning
+                        {{ session.session }}
                       </td>
                       <td class="align-middle text-center text-sm">
-                        7:30 am
+                        {{ session.start }}
                       </td>
                       <td class="align-middle">
-                        4:00 pm
-                      </td>
-                      <td class="align-middle">
-                       <div class="col-lg-6 col-5 my-auto text-end">
-                         <div class="dropdown float-lg-end pe-4">
-                           <a class="cursor-pointer" id="dropdownTable" data-bs-toggle="dropdown" aria-expanded="false">
-                             <i class="fa fa-ellipsis-h text-secondary"></i>
-                           </a>
-                           <ul class="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5" aria-labelledby="dropdownTable">
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Another action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else here</a></li>
-                           </ul>
-                         </div>
-                       </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Mid-Morning
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        7:30 am
-                      </td>
-                      <td class="align-middle">
-                        4:00 pm
-                      </td>
-                      <td class="align-middle">
-                       <div class="col-lg-6 col-5 my-auto text-end">
-                         <div class="dropdown float-lg-end pe-4">
-                           <a class="cursor-pointer" id="dropdownTable" data-bs-toggle="dropdown" aria-expanded="false">
-                             <i class="fa fa-ellipsis-h text-secondary"></i>
-                           </a>
-                           <ul class="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5" aria-labelledby="dropdownTable">
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Another action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else here</a></li>
-                           </ul>
-                         </div>
-                       </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Afternoon
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        7:30 am
-                      </td>
-                      <td class="align-middle">
-                        4:00 pm
-                      </td>
-                      <td class="align-middle">
-                       <div class="col-lg-6 col-5 my-auto text-end">
-                         <div class="dropdown float-lg-end pe-4">
-                           <a class="cursor-pointer" id="dropdownTable" data-bs-toggle="dropdown" aria-expanded="false">
-                             <i class="fa fa-ellipsis-h text-secondary"></i>
-                           </a>
-                           <ul class="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5" aria-labelledby="dropdownTable">
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Another action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else here</a></li>
-                           </ul>
-                         </div>
-                       </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Evening
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        7:30 am
-                      </td>
-                      <td class="align-middle">
-                        4:00 pm
+                        {{ session.end }}
                       </td>
                       <td class="align-middle">
                        <div class="col-lg-6 col-5 my-auto text-end">
@@ -137,6 +62,26 @@
     export default defineComponent({
         components: {
 
+        },
+        data() {
+            return {
+              sessions: {}
+            }
+        },
+        methods: {
+          getDaySessions()
+          {
+            axios.get('daysession')
+            .then((response)=>{
+              this.sessions = response.data;
+              console.log(response.data);
+            })
+          }
+        },
+
+        mounted()
+        {
+          this.getDaySessions();
         },
     })
 </script>

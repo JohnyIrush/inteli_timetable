@@ -1,21 +1,23 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\UI;
 
-use App\Models\DaySession;
-use App\Http\Requests\StoreDaySessionRequest;
-use App\Http\Requests\UpdateDaySessionRequest;
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\Controller\UI;
+use App\Models\Venue;
+use App\Http\Requests\StoreVenueRequest;
+use App\Http\Requests\UpdateVenueRequest;
 
-class DaySessionController extends Controller
+class VenueController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function venues()
     {
-        //
+        return Venue::all();
     }
 
     /**
@@ -31,10 +33,10 @@ class DaySessionController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreDaySessionRequest  $request
+     * @param  \App\Http\Requests\StoreVenueRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreDaySessionRequest $request)
+    public function store(StoreVenueRequest $request)
     {
         //
     }
@@ -42,10 +44,10 @@ class DaySessionController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\DaySession  $daySession
+     * @param  \App\Models\Venue  $venue
      * @return \Illuminate\Http\Response
      */
-    public function show(DaySession $daySession)
+    public function show(Venue $venue)
     {
         //
     }
@@ -53,10 +55,10 @@ class DaySessionController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\DaySession  $daySession
+     * @param  \App\Models\Venue  $venue
      * @return \Illuminate\Http\Response
      */
-    public function edit(DaySession $daySession)
+    public function edit(Venue $venue)
     {
         //
     }
@@ -64,11 +66,11 @@ class DaySessionController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateDaySessionRequest  $request
-     * @param  \App\Models\DaySession  $daySession
+     * @param  \App\Http\Requests\UpdateVenueRequest  $request
+     * @param  \App\Models\Venue  $venue
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateDaySessionRequest $request, DaySession $daySession)
+    public function update(UpdateVenueRequest $request, Venue $venue)
     {
         //
     }
@@ -76,10 +78,10 @@ class DaySessionController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\DaySession  $daySession
+     * @param  \App\Models\Venue  $venue
      * @return \Illuminate\Http\Response
      */
-    public function destroy(DaySession $daySession)
+    public function destroy(Venue $venue)
     {
         //
     }

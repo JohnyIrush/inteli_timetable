@@ -20273,7 +20273,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,vue__WEBPACK_IMPORTED_MODULE_0__.defineComponent)({
-  components: {}
+  components: {},
+  data: function data() {
+    return {
+      subjects: {}
+    };
+  },
+  methods: {
+    getSubjects: function getSubjects() {
+      var _this = this;
+
+      axios.get('subjects').then(function (response) {
+        _this.subjects = response.data; //console.log(response.data);
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.getSubjects();
+  }
 }));
 
 /***/ }),
@@ -21357,7 +21374,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,vue__WEBPACK_IMPORTED_MODULE_0__.defineComponent)({
-  components: {}
+  components: {},
+  data: function data() {
+    return {
+      teachers: {}
+    };
+  },
+  methods: {
+    getTeachers: function getTeachers() {
+      var _this = this;
+
+      axios.get('teachers').then(function (response) {
+        _this.teachers = response.data; //console.log(response.data);
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.getTeachers();
+  }
 }));
 
 /***/ }),
@@ -22016,7 +22050,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,vue__WEBPACK_IMPORTED_MODULE_0__.defineComponent)({
-  components: {}
+  components: {},
+  data: function data() {
+    return {
+      days: {}
+    };
+  },
+  methods: {
+    getDays: function getDays() {
+      var _this = this;
+
+      axios.get('days').then(function (response) {
+        _this.days = response.data; //console.log(response.data);
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.getDays();
+  }
 }));
 
 /***/ }),
@@ -22035,7 +22086,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,vue__WEBPACK_IMPORTED_MODULE_0__.defineComponent)({
-  components: {}
+  components: {},
+  data: function data() {
+    return {
+      sessions: {}
+    };
+  },
+  methods: {
+    getDaySessions: function getDaySessions() {
+      var _this = this;
+
+      axios.get('daysession').then(function (response) {
+        _this.sessions = response.data;
+        console.log(response.data);
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.getDaySessions();
+  }
 }));
 
 /***/ }),
@@ -22054,7 +22123,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,vue__WEBPACK_IMPORTED_MODULE_0__.defineComponent)({
-  components: {}
+  components: {},
+  data: function data() {
+    return {
+      venues: {}
+    };
+  },
+  methods: {
+    getVenues: function getVenues() {
+      var _this = this;
+
+      axios.get('venues').then(function (response) {
+        _this.venues = response.data; //console.log(response.data);
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.getVenues();
+  }
 }));
 
 /***/ }),
@@ -24439,12 +24525,105 @@ __webpack_require__.r(__webpack_exports__);
 var _hoisted_1 = {
   "class": "row justify-content-around my-4"
 };
+var _hoisted_2 = {
+  "class": "col-lg-8 col-md-6 mb-md-0 mb-4"
+};
+var _hoisted_3 = {
+  "class": "card"
+};
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"col-lg-8 col-md-6 mb-md-0 mb-4\"><div class=\"card\"><div class=\"card-header pb-0\"><div class=\"row\"><div class=\"col-lg-6 col-7\"><h6>Subjects</h6></div></div></div><div class=\"card-body px-0 pb-2\"><div class=\"table-responsive\"><table class=\"table align-items-center mb-0\"><thead><tr><th class=\"text-uppercase text-secondary text-xxs font-weight-bolder opacity-7\">Subject</th><th class=\"text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7\">Subject Teacher</th><th class=\"text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7\">Standard</th><th class=\"text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7\">Action</th></tr></thead><tbody><tr><td> Mathematics </td><td class=\"align-middle text-center text-sm\"> Chepkuon </td><td class=\"align-middle\"> Form 1, Form 2, Form 3, Form 4 </td><td class=\"align-middle\"><div class=\"col-lg-6 col-5 my-auto text-end\"><div class=\"dropdown float-lg-end pe-4\"><a class=\"cursor-pointer\" id=\"dropdownTable\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fa fa-ellipsis-h text-secondary\"></i></a><ul class=\"dropdown-menu px-2 py-3 ms-sm-n4 ms-n5\" aria-labelledby=\"dropdownTable\"><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Another action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Something else here</a></li></ul></div></div></td></tr><tr><td> Chemistry </td><td class=\"align-middle text-center text-sm\"> Walter White </td><td class=\"align-middle\"> Form 1, Form 2, Form 3, Form 4 </td><td class=\"align-middle\"><div class=\"col-lg-6 col-5 my-auto text-end\"><div class=\"dropdown float-lg-end pe-4\"><a class=\"cursor-pointer\" id=\"dropdownTable\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fa fa-ellipsis-h text-secondary\"></i></a><ul class=\"dropdown-menu px-2 py-3 ms-sm-n4 ms-n5\" aria-labelledby=\"dropdownTable\"><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Another action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Something else here</a></li></ul></div></div></td></tr><tr><td> Physics </td><td class=\"align-middle text-center text-sm\"> Laurence Krauss </td><td class=\"align-middle\"> Form 1, Form 2, Form 3, Form 4 </td><td class=\"align-middle\"><div class=\"col-lg-6 col-5 my-auto text-end\"><div class=\"dropdown float-lg-end pe-4\"><a class=\"cursor-pointer\" id=\"dropdownTable\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fa fa-ellipsis-h text-secondary\"></i></a><ul class=\"dropdown-menu px-2 py-3 ms-sm-n4 ms-n5\" aria-labelledby=\"dropdownTable\"><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Another action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Something else here</a></li></ul></div></div></td></tr><tr><td> Computer Studies </td><td class=\"align-middle text-center text-sm\"> Abdul Barri </td><td class=\"align-middle\"> Form 1, Form 2, Form 3, Form 4 </td><td class=\"align-middle\"><div class=\"col-lg-6 col-5 my-auto text-end\"><div class=\"dropdown float-lg-end pe-4\"><a class=\"cursor-pointer\" id=\"dropdownTable\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fa fa-ellipsis-h text-secondary\"></i></a><ul class=\"dropdown-menu px-2 py-3 ms-sm-n4 ms-n5\" aria-labelledby=\"dropdownTable\"><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Another action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Something else here</a></li></ul></div></div></td></tr><tr><td> Biology </td><td class=\"align-middle text-center text-sm\"> Richard Dawkins </td><td class=\"align-middle\"> Form 1, Form 2, Form 3, Form 4 </td><td class=\"align-middle\"><div class=\"col-lg-6 col-5 my-auto text-end\"><div class=\"dropdown float-lg-end pe-4\"><a class=\"cursor-pointer\" id=\"dropdownTable\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fa fa-ellipsis-h text-secondary\"></i></a><ul class=\"dropdown-menu px-2 py-3 ms-sm-n4 ms-n5\" aria-labelledby=\"dropdownTable\"><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Another action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Something else here</a></li></ul></div></div></td></tr><tr><td> Geography </td><td class=\"align-middle text-center text-sm\"> Neil deGrasse </td><td class=\"align-middle\"> Form 1, Form 2, Form 3, Form 4 </td><td class=\"align-middle\"><div class=\"col-lg-6 col-5 my-auto text-end\"><div class=\"dropdown float-lg-end pe-4\"><a class=\"cursor-pointer\" id=\"dropdownTable\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fa fa-ellipsis-h text-secondary\"></i></a><ul class=\"dropdown-menu px-2 py-3 ms-sm-n4 ms-n5\" aria-labelledby=\"dropdownTable\"><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Another action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Something else here</a></li></ul></div></div></td></tr><tr><td> Psychology </td><td class=\"align-middle text-center text-sm\"> Dr. Paul Dobransky </td><td class=\"align-middle\"> Form 1, Form 2, Form 3, Form 4 </td><td class=\"align-middle\"><div class=\"col-lg-6 col-5 my-auto text-end\"><div class=\"dropdown float-lg-end pe-4\"><a class=\"cursor-pointer\" id=\"dropdownTable\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fa fa-ellipsis-h text-secondary\"></i></a><ul class=\"dropdown-menu px-2 py-3 ms-sm-n4 ms-n5\" aria-labelledby=\"dropdownTable\"><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Another action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Something else here</a></li></ul></div></div></td></tr><tr><td> Music </td><td class=\"align-middle text-center text-sm\"> Eminem </td><td class=\"align-middle\"> Form 1, Form 2, Form 3, Form 4 </td><td class=\"align-middle\"><div class=\"col-lg-6 col-5 my-auto text-end\"><div class=\"dropdown float-lg-end pe-4\"><a class=\"cursor-pointer\" id=\"dropdownTable\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fa fa-ellipsis-h text-secondary\"></i></a><ul class=\"dropdown-menu px-2 py-3 ms-sm-n4 ms-n5\" aria-labelledby=\"dropdownTable\"><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Another action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Something else here</a></li></ul></div></div></td></tr></tbody></table></div></div></div></div>", 1);
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "card-header pb-0"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "row"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "col-lg-6 col-7"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", null, "Subjects")])])], -1
+/* HOISTED */
+);
 
-var _hoisted_3 = [_hoisted_2];
+var _hoisted_5 = {
+  "class": "card-body px-0 pb-2"
+};
+var _hoisted_6 = {
+  "class": "table-responsive"
+};
+var _hoisted_7 = {
+  "class": "table align-items-center mb-0"
+};
+
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("thead", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  "class": "text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
+}, "Subject"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  "class": "text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
+}, "Department"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  "class": "text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
+}, "Subject Teacher"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  "class": "text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
+}, "Standard"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  "class": "text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
+}, "Action")])], -1
+/* HOISTED */
+);
+
+var _hoisted_9 = ["index"];
+var _hoisted_10 = {
+  "class": "align-middle"
+};
+var _hoisted_11 = {
+  "class": "align-middle text-center text-sm"
+};
+var _hoisted_12 = {
+  "class": "align-middle"
+};
+
+var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", {
+  "class": "align-middle"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "col-lg-6 col-5 my-auto text-end"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "dropdown float-lg-end pe-4"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  "class": "cursor-pointer",
+  id: "dropdownTable",
+  "data-bs-toggle": "dropdown",
+  "aria-expanded": "false"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "fa fa-ellipsis-h text-secondary"
+})]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", {
+  "class": "dropdown-menu px-2 py-3 ms-sm-n4 ms-n5",
+  "aria-labelledby": "dropdownTable"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  "class": "dropdown-item border-radius-md",
+  href: "javascript:;"
+}, "Action")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  "class": "dropdown-item border-radius-md",
+  href: "javascript:;"
+}, "Another action")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  "class": "dropdown-item border-radius-md",
+  href: "javascript:;"
+}, "Something else here")])])])])], -1
+/* HOISTED */
+);
+
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, _hoisted_3);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [_hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_7, [_hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tbody", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_ctx.subjects, function (subject) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tr", {
+      index: _ctx.index
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(subject.subject), 1
+    /* TEXT */
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(subject.department_id), 1
+    /* TEXT */
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(subject.teacher_id), 1
+    /* TEXT */
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(subject.level_id), 1
+    /* TEXT */
+    ), _hoisted_13], 8
+    /* PROPS */
+    , _hoisted_9);
+  }), 256
+  /* UNKEYED_FRAGMENT */
+  ))])])])])])])]);
 }
 
 /***/ }),
@@ -26998,12 +27177,102 @@ __webpack_require__.r(__webpack_exports__);
 var _hoisted_1 = {
   "class": "row justify-content-around my-4"
 };
+var _hoisted_2 = {
+  "class": "col-lg-8 col-md-6 mb-md-0 mb-4"
+};
+var _hoisted_3 = {
+  "class": "card"
+};
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"col-lg-8 col-md-6 mb-md-0 mb-4\"><div class=\"card\"><div class=\"card-header pb-0\"><div class=\"row\"><div class=\"col-lg-6 col-7\"><h6>Teachers</h6></div></div></div><div class=\"card-body px-0 pb-2\"><div class=\"table-responsive\"><table class=\"table align-items-center mb-0\"><thead><tr><th class=\"text-uppercase text-secondary text-xxs font-weight-bolder opacity-7\">Teacher</th><th class=\"text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7\">Department</th><th class=\"text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7\">Subject</th><th class=\"text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7\">Standard</th><th class=\"text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7\">Action</th></tr></thead><tbody><tr><td class=\"align-middle text-center text-sm\"> Chepkuon </td><td> Mathematics </td><td> Mathematics </td><td class=\"align-middle\"> Form 1, Form 2, Form 3, Form 4 </td><td class=\"align-middle\"><div class=\"col-lg-6 col-5 my-auto text-end\"><div class=\"dropdown float-lg-end pe-4\"><a class=\"cursor-pointer\" id=\"dropdownTable\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fa fa-ellipsis-h text-secondary\"></i></a><ul class=\"dropdown-menu px-2 py-3 ms-sm-n4 ms-n5\" aria-labelledby=\"dropdownTable\"><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Another action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Something else here</a></li></ul></div></div></td></tr><tr><td class=\"align-middle text-center text-sm\"> Walter White </td><td> Science </td><td> Chemistry </td><td class=\"align-middle\"> Form 1, Form 2, Form 3, Form 4 </td><td class=\"align-middle\"><div class=\"col-lg-6 col-5 my-auto text-end\"><div class=\"dropdown float-lg-end pe-4\"><a class=\"cursor-pointer\" id=\"dropdownTable\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fa fa-ellipsis-h text-secondary\"></i></a><ul class=\"dropdown-menu px-2 py-3 ms-sm-n4 ms-n5\" aria-labelledby=\"dropdownTable\"><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Another action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Something else here</a></li></ul></div></div></td></tr><tr><td class=\"align-middle text-center text-sm\"> Laurence Krauss </td><td> Science </td><td> Physics </td><td class=\"align-middle\"> Form 1, Form 2, Form 3, Form 4 </td><td class=\"align-middle\"><div class=\"col-lg-6 col-5 my-auto text-end\"><div class=\"dropdown float-lg-end pe-4\"><a class=\"cursor-pointer\" id=\"dropdownTable\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fa fa-ellipsis-h text-secondary\"></i></a><ul class=\"dropdown-menu px-2 py-3 ms-sm-n4 ms-n5\" aria-labelledby=\"dropdownTable\"><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Another action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Something else here</a></li></ul></div></div></td></tr><tr><td class=\"align-middle text-center text-sm\"> Abdul Barri </td><td> Applied </td><td> Computer Studies </td><td class=\"align-middle\"> Form 1, Form 2, Form 3, Form 4 </td><td class=\"align-middle\"><div class=\"col-lg-6 col-5 my-auto text-end\"><div class=\"dropdown float-lg-end pe-4\"><a class=\"cursor-pointer\" id=\"dropdownTable\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fa fa-ellipsis-h text-secondary\"></i></a><ul class=\"dropdown-menu px-2 py-3 ms-sm-n4 ms-n5\" aria-labelledby=\"dropdownTable\"><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Another action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Something else here</a></li></ul></div></div></td></tr><tr><td class=\"align-middle text-center text-sm\"> Richard Dawkins </td><td> Science </td><td> Biology </td><td class=\"align-middle\"> Form 1, Form 2, Form 3, Form 4 </td><td class=\"align-middle\"><div class=\"col-lg-6 col-5 my-auto text-end\"><div class=\"dropdown float-lg-end pe-4\"><a class=\"cursor-pointer\" id=\"dropdownTable\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fa fa-ellipsis-h text-secondary\"></i></a><ul class=\"dropdown-menu px-2 py-3 ms-sm-n4 ms-n5\" aria-labelledby=\"dropdownTable\"><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Another action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Something else here</a></li></ul></div></div></td></tr><tr><td class=\"align-middle text-center text-sm\"> Neil deGrasse </td><td class=\"align-middle text-center text-sm\"> Humanities </td><td> Geography </td><td class=\"align-middle\"> Form 1, Form 2, Form 3, Form 4 </td><td class=\"align-middle\"><div class=\"col-lg-6 col-5 my-auto text-end\"><div class=\"dropdown float-lg-end pe-4\"><a class=\"cursor-pointer\" id=\"dropdownTable\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fa fa-ellipsis-h text-secondary\"></i></a><ul class=\"dropdown-menu px-2 py-3 ms-sm-n4 ms-n5\" aria-labelledby=\"dropdownTable\"><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Another action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Something else here</a></li></ul></div></div></td></tr><tr><td class=\"align-middle text-center text-sm\"> Dr. Paul Dobransky </td><td> Science </td><td> Psychology </td><td class=\"align-middle\"> Form 1, Form 2, Form 3, Form 4 </td><td class=\"align-middle\"><div class=\"col-lg-6 col-5 my-auto text-end\"><div class=\"dropdown float-lg-end pe-4\"><a class=\"cursor-pointer\" id=\"dropdownTable\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fa fa-ellipsis-h text-secondary\"></i></a><ul class=\"dropdown-menu px-2 py-3 ms-sm-n4 ms-n5\" aria-labelledby=\"dropdownTable\"><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Another action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Something else here</a></li></ul></div></div></td></tr><tr><td class=\"align-middle text-center text-sm\"> Eminem </td><td> Applied </td><td> Music </td><td class=\"align-middle\"> Form 1, Form 2, Form 3, Form 4 </td><td class=\"align-middle\"><div class=\"col-lg-6 col-5 my-auto text-end\"><div class=\"dropdown float-lg-end pe-4\"><a class=\"cursor-pointer\" id=\"dropdownTable\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fa fa-ellipsis-h text-secondary\"></i></a><ul class=\"dropdown-menu px-2 py-3 ms-sm-n4 ms-n5\" aria-labelledby=\"dropdownTable\"><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Another action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Something else here</a></li></ul></div></div></td></tr></tbody></table></div></div></div></div>", 1);
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "card-header pb-0"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "row"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "col-lg-6 col-7"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", null, "Teachers")])])], -1
+/* HOISTED */
+);
 
-var _hoisted_3 = [_hoisted_2];
+var _hoisted_5 = {
+  "class": "card-body px-0 pb-2"
+};
+var _hoisted_6 = {
+  "class": "table-responsive"
+};
+var _hoisted_7 = {
+  "class": "table align-items-center mb-0"
+};
+
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("thead", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  "class": "text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
+}, "Teacher"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  "class": "text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
+}, "Department"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  "class": "text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
+}, "Subject"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  "class": "text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
+}, "Standard"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  "class": "text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
+}, "Action")])], -1
+/* HOISTED */
+);
+
+var _hoisted_9 = ["index"];
+var _hoisted_10 = {
+  "class": "align-middle text-center text-sm"
+};
+var _hoisted_11 = {
+  "class": "align-middle"
+};
+
+var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", {
+  "class": "align-middle"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "col-lg-6 col-5 my-auto text-end"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "dropdown float-lg-end pe-4"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  "class": "cursor-pointer",
+  id: "dropdownTable",
+  "data-bs-toggle": "dropdown",
+  "aria-expanded": "false"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "fa fa-ellipsis-h text-secondary"
+})]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", {
+  "class": "dropdown-menu px-2 py-3 ms-sm-n4 ms-n5",
+  "aria-labelledby": "dropdownTable"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  "class": "dropdown-item border-radius-md",
+  href: "javascript:;"
+}, "Action")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  "class": "dropdown-item border-radius-md",
+  href: "javascript:;"
+}, "Another action")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  "class": "dropdown-item border-radius-md",
+  href: "javascript:;"
+}, "Something else here")])])])])], -1
+/* HOISTED */
+);
+
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, _hoisted_3);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [_hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_7, [_hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tbody", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_ctx.teachers, function (teacher) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tr", {
+      index: _ctx.index
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(teacher.teacher), 1
+    /* TEXT */
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(teacher.department_id), 1
+    /* TEXT */
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(teacher.subject_id), 1
+    /* TEXT */
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(teacher.level_id), 1
+    /* TEXT */
+    ), _hoisted_12], 8
+    /* PROPS */
+    , _hoisted_9);
+  }), 256
+  /* UNKEYED_FRAGMENT */
+  ))])])])])])])]);
 }
 
 /***/ }),
@@ -33262,12 +33531,102 @@ __webpack_require__.r(__webpack_exports__);
 var _hoisted_1 = {
   "class": "row justify-content-around my-4"
 };
+var _hoisted_2 = {
+  "class": "col-lg-11 col-md-6 mb-md-0 mb-4"
+};
+var _hoisted_3 = {
+  "class": "card"
+};
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"col-lg-11 col-md-6 mb-md-0 mb-4\"><div class=\"card\"><div class=\"card-header pb-0\"><div class=\"row\"><div class=\"col-lg-6 col-7\"><h6>Days</h6></div></div></div><div class=\"card-body px-0 pb-2\"><div class=\"table-responsive\"><table class=\"table align-items-center mb-0\"><thead><tr><th class=\"text-uppercase text-secondary text-xxs font-weight-bolder opacity-7\">Day</th><th class=\"text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2\">Sessions</th><th class=\"text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7\">Start</th><th class=\"text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7\">End</th><th class=\"text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7\">Action</th></tr></thead><tbody><tr><td> Sunday </td><td><p>Morning, Mid-Morning, Afternoon</p></td><td class=\"align-middle text-center text-sm\"> 7:30 am </td><td class=\"align-middle\"> 4:00 pm </td></tr><tr><td> Sunday </td><td><p>Morning, Mid-Morning, Afternoon</p></td><td class=\"align-middle text-center text-sm\"> 7:30 am </td><td class=\"align-middle\"> 4:00 pm </td><td class=\"align-middle\"><div class=\"col-lg-6 col-5 my-auto text-end\"><div class=\"dropdown float-lg-end pe-4\"><a class=\"cursor-pointer\" id=\"dropdownTable\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fa fa-ellipsis-h text-secondary\"></i></a><ul class=\"dropdown-menu px-2 py-3 ms-sm-n4 ms-n5\" aria-labelledby=\"dropdownTable\"><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Another action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Something else here</a></li></ul></div></div></td></tr><tr><td> Monday </td><td><p>Morning, Mid-Morning, Afternoon</p></td><td class=\"align-middle text-center text-sm\"> 7:30 am </td><td class=\"align-middle\"> 4:00 pm </td><td class=\"align-middle\"><div class=\"col-lg-6 col-5 my-auto text-end\"><div class=\"dropdown float-lg-end pe-4\"><a class=\"cursor-pointer\" id=\"dropdownTable\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fa fa-ellipsis-h text-secondary\"></i></a><ul class=\"dropdown-menu px-2 py-3 ms-sm-n4 ms-n5\" aria-labelledby=\"dropdownTable\"><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Another action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Something else here</a></li></ul></div></div></td></tr><tr><td> Tuesday </td><td><p>Morning, Mid-Morning, Afternoon</p></td><td class=\"align-middle text-center text-sm\"> 7:30 am </td><td class=\"align-middle\"> 4:00 pm </td><td class=\"align-middle\"><div class=\"col-lg-6 col-5 my-auto text-end\"><div class=\"dropdown float-lg-end pe-4\"><a class=\"cursor-pointer\" id=\"dropdownTable\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fa fa-ellipsis-h text-secondary\"></i></a><ul class=\"dropdown-menu px-2 py-3 ms-sm-n4 ms-n5\" aria-labelledby=\"dropdownTable\"><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Another action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Something else here</a></li></ul></div></div></td></tr><tr><td> Wednesday </td><td><p>Morning, Mid-Morning, Afternoon</p></td><td class=\"align-middle text-center text-sm\"> 7:30 am </td><td class=\"align-middle\"> 4:00 pm </td><td class=\"align-middle\"><div class=\"col-lg-6 col-5 my-auto text-end\"><div class=\"dropdown float-lg-end pe-4\"><a class=\"cursor-pointer\" id=\"dropdownTable\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fa fa-ellipsis-h text-secondary\"></i></a><ul class=\"dropdown-menu px-2 py-3 ms-sm-n4 ms-n5\" aria-labelledby=\"dropdownTable\"><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Another action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Something else here</a></li></ul></div></div></td></tr><tr><td> Thursday </td><td><p>Morning, Mid-Morning, Afternoon</p></td><td class=\"align-middle text-center text-sm\"> 7:30 am </td><td class=\"align-middle\"> 4:00 pm </td><td class=\"align-middle\"><div class=\"col-lg-6 col-5 my-auto text-end\"><div class=\"dropdown float-lg-end pe-4\"><a class=\"cursor-pointer\" id=\"dropdownTable\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fa fa-ellipsis-h text-secondary\"></i></a><ul class=\"dropdown-menu px-2 py-3 ms-sm-n4 ms-n5\" aria-labelledby=\"dropdownTable\"><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Another action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Something else here</a></li></ul></div></div></td></tr><tr><td> Friday </td><td><p>Morning, Mid-Morning, Afternoon</p></td><td class=\"align-middle text-center text-sm\"> 7:30 am </td><td class=\"align-middle\"> 4:00 pm </td><td class=\"align-middle\"><div class=\"col-lg-6 col-5 my-auto text-end\"><div class=\"dropdown float-lg-end pe-4\"><a class=\"cursor-pointer\" id=\"dropdownTable\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fa fa-ellipsis-h text-secondary\"></i></a><ul class=\"dropdown-menu px-2 py-3 ms-sm-n4 ms-n5\" aria-labelledby=\"dropdownTable\"><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Another action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Something else here</a></li></ul></div></div></td></tr><tr><td> Saturday </td><td><p>Morning, Mid-Morning, Afternoon</p></td><td class=\"align-middle text-center text-sm\"> 7:30 am </td><td class=\"align-middle\"> 4:00 pm </td><td class=\"align-middle\"><div class=\"col-lg-6 col-5 my-auto text-end\"><div class=\"dropdown float-lg-end pe-4\"><a class=\"cursor-pointer\" id=\"dropdownTable\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fa fa-ellipsis-h text-secondary\"></i></a><ul class=\"dropdown-menu px-2 py-3 ms-sm-n4 ms-n5\" aria-labelledby=\"dropdownTable\"><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Another action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Something else here</a></li></ul></div></div></td></tr></tbody></table></div></div></div></div>", 1);
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "card-header pb-0"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "row"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "col-lg-6 col-7"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", null, "Days")])])], -1
+/* HOISTED */
+);
 
-var _hoisted_3 = [_hoisted_2];
+var _hoisted_5 = {
+  "class": "card-body px-0 pb-2"
+};
+var _hoisted_6 = {
+  "class": "table-responsive"
+};
+var _hoisted_7 = {
+  "class": "table align-items-center mb-0"
+};
+
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("thead", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  "class": "text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
+}, "Day"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  "class": "text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2"
+}, "Sessions"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  "class": "text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
+}, "Start"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  "class": "text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
+}, "End"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  "class": "text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
+}, "Action")])], -1
+/* HOISTED */
+);
+
+var _hoisted_9 = ["index"];
+var _hoisted_10 = {
+  "class": "align-middle text-center text-sm"
+};
+var _hoisted_11 = {
+  "class": "align-middle"
+};
+
+var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", {
+  "class": "align-middle"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "col-lg-6 col-5 my-auto text-end"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "dropdown float-lg-end pe-4"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  "class": "cursor-pointer",
+  id: "dropdownTable",
+  "data-bs-toggle": "dropdown",
+  "aria-expanded": "false"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "fa fa-ellipsis-h text-secondary"
+})]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", {
+  "class": "dropdown-menu px-2 py-3 ms-sm-n4 ms-n5",
+  "aria-labelledby": "dropdownTable"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  "class": "dropdown-item border-radius-md",
+  href: "javascript:;"
+}, "Action")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  "class": "dropdown-item border-radius-md",
+  href: "javascript:;"
+}, "Another action")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  "class": "dropdown-item border-radius-md",
+  href: "javascript:;"
+}, "Something else here")])])])])], -1
+/* HOISTED */
+);
+
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, _hoisted_3);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [_hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_7, [_hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tbody", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_ctx.days, function (day) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tr", {
+      index: _ctx.index
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(day.day), 1
+    /* TEXT */
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(day.day_session_id), 1
+    /* TEXT */
+    )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(day.start), 1
+    /* TEXT */
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(day.end), 1
+    /* TEXT */
+    ), _hoisted_12], 8
+    /* PROPS */
+    , _hoisted_9);
+  }), 256
+  /* UNKEYED_FRAGMENT */
+  ))])])])])])])]);
 }
 
 /***/ }),
@@ -33288,12 +33647,98 @@ __webpack_require__.r(__webpack_exports__);
 var _hoisted_1 = {
   "class": "row justify-content-around my-4"
 };
+var _hoisted_2 = {
+  "class": "col-lg-8 col-md-6 mb-md-0 mb-4"
+};
+var _hoisted_3 = {
+  "class": "card"
+};
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"col-lg-8 col-md-6 mb-md-0 mb-4\"><div class=\"card\"><div class=\"card-header pb-0\"><div class=\"row\"><div class=\"col-lg-6 col-7\"><h6>Sessions</h6></div></div></div><div class=\"card-body px-0 pb-2\"><div class=\"table-responsive\"><table class=\"table align-items-center mb-0\"><thead><tr><th class=\"text-uppercase text-secondary text-xxs font-weight-bolder opacity-7\">Session</th><th class=\"text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7\">Start</th><th class=\"text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7\">End</th><th class=\"text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7\">Action</th></tr></thead><tbody><tr><td> Morning </td><td class=\"align-middle text-center text-sm\"> 7:30 am </td><td class=\"align-middle\"> 4:00 pm </td><td class=\"align-middle\"><div class=\"col-lg-6 col-5 my-auto text-end\"><div class=\"dropdown float-lg-end pe-4\"><a class=\"cursor-pointer\" id=\"dropdownTable\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fa fa-ellipsis-h text-secondary\"></i></a><ul class=\"dropdown-menu px-2 py-3 ms-sm-n4 ms-n5\" aria-labelledby=\"dropdownTable\"><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Another action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Something else here</a></li></ul></div></div></td></tr><tr><td> Mid-Morning </td><td class=\"align-middle text-center text-sm\"> 7:30 am </td><td class=\"align-middle\"> 4:00 pm </td><td class=\"align-middle\"><div class=\"col-lg-6 col-5 my-auto text-end\"><div class=\"dropdown float-lg-end pe-4\"><a class=\"cursor-pointer\" id=\"dropdownTable\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fa fa-ellipsis-h text-secondary\"></i></a><ul class=\"dropdown-menu px-2 py-3 ms-sm-n4 ms-n5\" aria-labelledby=\"dropdownTable\"><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Another action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Something else here</a></li></ul></div></div></td></tr><tr><td> Afternoon </td><td class=\"align-middle text-center text-sm\"> 7:30 am </td><td class=\"align-middle\"> 4:00 pm </td><td class=\"align-middle\"><div class=\"col-lg-6 col-5 my-auto text-end\"><div class=\"dropdown float-lg-end pe-4\"><a class=\"cursor-pointer\" id=\"dropdownTable\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fa fa-ellipsis-h text-secondary\"></i></a><ul class=\"dropdown-menu px-2 py-3 ms-sm-n4 ms-n5\" aria-labelledby=\"dropdownTable\"><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Another action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Something else here</a></li></ul></div></div></td></tr><tr><td> Evening </td><td class=\"align-middle text-center text-sm\"> 7:30 am </td><td class=\"align-middle\"> 4:00 pm </td><td class=\"align-middle\"><div class=\"col-lg-6 col-5 my-auto text-end\"><div class=\"dropdown float-lg-end pe-4\"><a class=\"cursor-pointer\" id=\"dropdownTable\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fa fa-ellipsis-h text-secondary\"></i></a><ul class=\"dropdown-menu px-2 py-3 ms-sm-n4 ms-n5\" aria-labelledby=\"dropdownTable\"><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Another action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Something else here</a></li></ul></div></div></td></tr></tbody></table></div></div></div></div>", 1);
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "card-header pb-0"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "row"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "col-lg-6 col-7"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", null, "Sessions")])])], -1
+/* HOISTED */
+);
 
-var _hoisted_3 = [_hoisted_2];
+var _hoisted_5 = {
+  "class": "card-body px-0 pb-2"
+};
+var _hoisted_6 = {
+  "class": "table-responsive"
+};
+var _hoisted_7 = {
+  "class": "table align-items-center mb-0"
+};
+
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("thead", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  "class": "text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
+}, "Session"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  "class": "text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
+}, "Start"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  "class": "text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
+}, "End"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  "class": "text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
+}, "Action")])], -1
+/* HOISTED */
+);
+
+var _hoisted_9 = ["index"];
+var _hoisted_10 = {
+  "class": "align-middle text-center text-sm"
+};
+var _hoisted_11 = {
+  "class": "align-middle"
+};
+
+var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", {
+  "class": "align-middle"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "col-lg-6 col-5 my-auto text-end"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "dropdown float-lg-end pe-4"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  "class": "cursor-pointer",
+  id: "dropdownTable",
+  "data-bs-toggle": "dropdown",
+  "aria-expanded": "false"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "fa fa-ellipsis-h text-secondary"
+})]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", {
+  "class": "dropdown-menu px-2 py-3 ms-sm-n4 ms-n5",
+  "aria-labelledby": "dropdownTable"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  "class": "dropdown-item border-radius-md",
+  href: "javascript:;"
+}, "Action")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  "class": "dropdown-item border-radius-md",
+  href: "javascript:;"
+}, "Another action")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  "class": "dropdown-item border-radius-md",
+  href: "javascript:;"
+}, "Something else here")])])])])], -1
+/* HOISTED */
+);
+
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, _hoisted_3);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [_hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_7, [_hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tbody", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_ctx.sessions, function (session) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tr", {
+      index: _ctx.index
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(session.session), 1
+    /* TEXT */
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(session.start), 1
+    /* TEXT */
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(session.end), 1
+    /* TEXT */
+    ), _hoisted_12], 8
+    /* PROPS */
+    , _hoisted_9);
+  }), 256
+  /* UNKEYED_FRAGMENT */
+  ))])])])])])])]);
 }
 
 /***/ }),
@@ -33314,12 +33759,98 @@ __webpack_require__.r(__webpack_exports__);
 var _hoisted_1 = {
   "class": "row justify-content-around my-4"
 };
+var _hoisted_2 = {
+  "class": "col-lg-8 col-md-6 mb-md-0 mb-4"
+};
+var _hoisted_3 = {
+  "class": "card"
+};
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"col-lg-8 col-md-6 mb-md-0 mb-4\"><div class=\"card\"><div class=\"card-header pb-0\"><div class=\"row\"><div class=\"col-lg-6 col-7\"><h6>Venues</h6></div></div></div><div class=\"card-body px-0 pb-2\"><div class=\"table-responsive\"><table class=\"table align-items-center mb-0\"><thead><tr><th class=\"text-uppercase text-secondary text-xxs font-weight-bolder opacity-7\">Venue</th><th class=\"text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7\">Accessibility</th><th class=\"text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7\">Location</th><th class=\"text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7\">Action</th></tr></thead><tbody><tr><td> Class 1 Room </td><td class=\"align-middle text-center text-sm\"> Form 1, Form 2, Form 3 </td><td class=\"align-middle\"> GPS </td><td class=\"align-middle\"><div class=\"col-lg-6 col-5 my-auto text-end\"><div class=\"dropdown float-lg-end pe-4\"><a class=\"cursor-pointer\" id=\"dropdownTable\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fa fa-ellipsis-h text-secondary\"></i></a><ul class=\"dropdown-menu px-2 py-3 ms-sm-n4 ms-n5\" aria-labelledby=\"dropdownTable\"><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Another action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Something else here</a></li></ul></div></div></td></tr><tr><td> Class 2 Room </td><td class=\"align-middle text-center text-sm\"> Form 1, Form 2, Form 3 </td><td class=\"align-middle\"> GPS </td><td class=\"align-middle\"><div class=\"col-lg-6 col-5 my-auto text-end\"><div class=\"dropdown float-lg-end pe-4\"><a class=\"cursor-pointer\" id=\"dropdownTable\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fa fa-ellipsis-h text-secondary\"></i></a><ul class=\"dropdown-menu px-2 py-3 ms-sm-n4 ms-n5\" aria-labelledby=\"dropdownTable\"><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Another action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Something else here</a></li></ul></div></div></td></tr><tr><td> Class 3 Room </td><td class=\"align-middle text-center text-sm\"> Form 1, Form 2, Form 3 </td><td class=\"align-middle\"> GPS </td><td class=\"align-middle\"><div class=\"col-lg-6 col-5 my-auto text-end\"><div class=\"dropdown float-lg-end pe-4\"><a class=\"cursor-pointer\" id=\"dropdownTable\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fa fa-ellipsis-h text-secondary\"></i></a><ul class=\"dropdown-menu px-2 py-3 ms-sm-n4 ms-n5\" aria-labelledby=\"dropdownTable\"><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Another action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Something else here</a></li></ul></div></div></td></tr><tr><td> Class 4 Room </td><td class=\"align-middle text-center text-sm\"> Form 1, Form 2, Form 4 </td><td class=\"align-middle\"> GPS </td><td class=\"align-middle\"><div class=\"col-lg-6 col-5 my-auto text-end\"><div class=\"dropdown float-lg-end pe-4\"><a class=\"cursor-pointer\" id=\"dropdownTable\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fa fa-ellipsis-h text-secondary\"></i></a><ul class=\"dropdown-menu px-2 py-3 ms-sm-n4 ms-n5\" aria-labelledby=\"dropdownTable\"><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Another action</a></li><li><a class=\"dropdown-item border-radius-md\" href=\"javascript:;\">Something else here</a></li></ul></div></div></td></tr></tbody></table></div></div></div></div>", 1);
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "card-header pb-0"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "row"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "col-lg-6 col-7"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", null, "Venues")])])], -1
+/* HOISTED */
+);
 
-var _hoisted_3 = [_hoisted_2];
+var _hoisted_5 = {
+  "class": "card-body px-0 pb-2"
+};
+var _hoisted_6 = {
+  "class": "table-responsive"
+};
+var _hoisted_7 = {
+  "class": "table align-items-center mb-0"
+};
+
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("thead", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  "class": "text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
+}, "Venue"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  "class": "text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
+}, "Accessibility"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  "class": "text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
+}, "Location"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  "class": "text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
+}, "Action")])], -1
+/* HOISTED */
+);
+
+var _hoisted_9 = ["index"];
+var _hoisted_10 = {
+  "class": "align-middle text-center text-sm"
+};
+var _hoisted_11 = {
+  "class": "align-middle"
+};
+
+var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", {
+  "class": "align-middle"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "col-lg-6 col-5 my-auto text-end"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "dropdown float-lg-end pe-4"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  "class": "cursor-pointer",
+  id: "dropdownTable",
+  "data-bs-toggle": "dropdown",
+  "aria-expanded": "false"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "fa fa-ellipsis-h text-secondary"
+})]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", {
+  "class": "dropdown-menu px-2 py-3 ms-sm-n4 ms-n5",
+  "aria-labelledby": "dropdownTable"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  "class": "dropdown-item border-radius-md",
+  href: "javascript:;"
+}, "Action")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  "class": "dropdown-item border-radius-md",
+  href: "javascript:;"
+}, "Another action")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  "class": "dropdown-item border-radius-md",
+  href: "javascript:;"
+}, "Something else here")])])])])], -1
+/* HOISTED */
+);
+
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, _hoisted_3);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [_hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_7, [_hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tbody", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_ctx.venues, function (venue) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tr", {
+      index: _ctx.index
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(venue.venue), 1
+    /* TEXT */
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(venue.level_id), 1
+    /* TEXT */
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(venue.location), 1
+    /* TEXT */
+    ), _hoisted_12], 8
+    /* PROPS */
+    , _hoisted_9);
+  }), 256
+  /* UNKEYED_FRAGMENT */
+  ))])])])])])])]);
 }
 
 /***/ }),

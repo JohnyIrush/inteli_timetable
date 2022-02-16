@@ -22,200 +22,18 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
+                    <tr v-for="day in days" :index="index">
                       <td>
-                        Sunday
+                        {{ day.day }}
                       </td>
                       <td>
-                        <p>Morning, Mid-Morning, Afternoon</p>
+                        <p>{{ day.day_session_id }}</p>
                       </td>
                       <td class="align-middle text-center text-sm">
-                        7:30 am
+                        {{ day.start }}
                       </td>
                       <td class="align-middle">
-                        4:00 pm
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Sunday
-                      </td>
-                      <td>
-                        <p>Morning, Mid-Morning, Afternoon</p>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        7:30 am
-                      </td>
-                      <td class="align-middle">
-                        4:00 pm
-                      </td>
-                      <td class="align-middle">
-                       <div class="col-lg-6 col-5 my-auto text-end">
-                         <div class="dropdown float-lg-end pe-4">
-                           <a class="cursor-pointer" id="dropdownTable" data-bs-toggle="dropdown" aria-expanded="false">
-                             <i class="fa fa-ellipsis-h text-secondary"></i>
-                           </a>
-                           <ul class="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5" aria-labelledby="dropdownTable">
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Another action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else here</a></li>
-                           </ul>
-                         </div>
-                       </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Monday
-                      </td>
-                      <td>
-                        <p>Morning, Mid-Morning, Afternoon</p>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        7:30 am
-                      </td>
-                      <td class="align-middle">
-                        4:00 pm
-                      </td>
-                      <td class="align-middle">
-                       <div class="col-lg-6 col-5 my-auto text-end">
-                         <div class="dropdown float-lg-end pe-4">
-                           <a class="cursor-pointer" id="dropdownTable" data-bs-toggle="dropdown" aria-expanded="false">
-                             <i class="fa fa-ellipsis-h text-secondary"></i>
-                           </a>
-                           <ul class="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5" aria-labelledby="dropdownTable">
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Another action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else here</a></li>
-                           </ul>
-                         </div>
-                       </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Tuesday
-                      </td>
-                      <td>
-                        <p>Morning, Mid-Morning, Afternoon</p>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        7:30 am
-                      </td>
-                      <td class="align-middle">
-                        4:00 pm
-                      </td>
-                      <td class="align-middle">
-                       <div class="col-lg-6 col-5 my-auto text-end">
-                         <div class="dropdown float-lg-end pe-4">
-                           <a class="cursor-pointer" id="dropdownTable" data-bs-toggle="dropdown" aria-expanded="false">
-                             <i class="fa fa-ellipsis-h text-secondary"></i>
-                           </a>
-                           <ul class="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5" aria-labelledby="dropdownTable">
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Another action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else here</a></li>
-                           </ul>
-                         </div>
-                       </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Wednesday
-                      </td>
-                      <td>
-                        <p>Morning, Mid-Morning, Afternoon</p>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        7:30 am
-                      </td>
-                      <td class="align-middle">
-                        4:00 pm
-                      </td>
-                      <td class="align-middle">
-                       <div class="col-lg-6 col-5 my-auto text-end">
-                         <div class="dropdown float-lg-end pe-4">
-                           <a class="cursor-pointer" id="dropdownTable" data-bs-toggle="dropdown" aria-expanded="false">
-                             <i class="fa fa-ellipsis-h text-secondary"></i>
-                           </a>
-                           <ul class="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5" aria-labelledby="dropdownTable">
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Another action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else here</a></li>
-                           </ul>
-                         </div>
-                       </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Thursday
-                      </td>
-                      <td>
-                        <p>Morning, Mid-Morning, Afternoon</p>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        7:30 am
-                      </td>
-                      <td class="align-middle">
-                        4:00 pm
-                      </td>
-                      <td class="align-middle">
-                       <div class="col-lg-6 col-5 my-auto text-end">
-                         <div class="dropdown float-lg-end pe-4">
-                           <a class="cursor-pointer" id="dropdownTable" data-bs-toggle="dropdown" aria-expanded="false">
-                             <i class="fa fa-ellipsis-h text-secondary"></i>
-                           </a>
-                           <ul class="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5" aria-labelledby="dropdownTable">
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Another action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else here</a></li>
-                           </ul>
-                         </div>
-                       </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Friday
-                      </td>
-                      <td>
-                        <p>Morning, Mid-Morning, Afternoon</p>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        7:30 am
-                      </td>
-                      <td class="align-middle">
-                        4:00 pm
-                      </td>
-                      <td class="align-middle">
-                       <div class="col-lg-6 col-5 my-auto text-end">
-                         <div class="dropdown float-lg-end pe-4">
-                           <a class="cursor-pointer" id="dropdownTable" data-bs-toggle="dropdown" aria-expanded="false">
-                             <i class="fa fa-ellipsis-h text-secondary"></i>
-                           </a>
-                           <ul class="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5" aria-labelledby="dropdownTable">
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Another action</a></li>
-                             <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else here</a></li>
-                           </ul>
-                         </div>
-                       </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Saturday
-                      </td>
-                      <td>
-                        <p>Morning, Mid-Morning, Afternoon</p>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        7:30 am
-                      </td>
-                      <td class="align-middle">
-                        4:00 pm
+                        {{ day.end }}
                       </td>
                       <td class="align-middle">
                        <div class="col-lg-6 col-5 my-auto text-end">
@@ -248,6 +66,25 @@
     export default defineComponent({
         components: {
 
+        },
+        data() {
+            return {
+              days: {}
+            }
+        },
+        methods: {
+          getDays()
+          {
+            axios.get('days')
+            .then((response)=>{
+              this.days = response.data;
+              //console.log(response.data);
+            })
+          }
+        },
+
+        mounted() {
+          this.getDays();
         },
     })
 </script>
