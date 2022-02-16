@@ -42,6 +42,9 @@
                            <li class="nav-item m-3 bg-gradient-success" role="presentation">
                              <button class="nav-link" id="venue-tab" data-bs-toggle="tab" data-bs-target="#venue" type="button" role="tab" aria-controls="venue" aria-selected="false">Venues</button>
                            </li>
+                           <li class="nav-item m-3 bg-gradient-success" role="presentation">
+                             <button class="nav-link" id="teacher-tab" data-bs-toggle="tab" data-bs-target="#teacher" type="button" role="tab" aria-controls="teacher" aria-selected="false">Teachers</button>
+                           </li>
                          </ul>
                       </div>
                       <div class="col-10">
@@ -60,6 +63,9 @@
                          </div>
                          <div class="tab-pane fade" id="venue" role="tabpanel" aria-labelledby="venue-tab">
                            <Venues></Venues>
+                         </div>
+                         <div class="tab-pane fade" id="teacher" role="tabpanel" aria-labelledby="teacher-tab">
+                           <Teachers></Teachers>
                          </div>
                        </div>
                       </div>
@@ -99,6 +105,7 @@
     import Venues from '../tables/venues.vue'
     import Subjects from '../../../Academic/Subjects/widgets/tables/subjects.vue'
     import Charts from '../../../Theme/plugins/Charts.vue'
+    import Teachers from '../../../Staff/Teachers/widgets/tables/teachers.vue'
 
 
     export default defineComponent({
@@ -108,6 +115,7 @@
             Venues,
             Subjects,
             Charts,
+            Teachers
         },
     })
 </script>
