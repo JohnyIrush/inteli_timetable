@@ -11,7 +11,7 @@ class Stream extends Model
 
     public function levels()
     {
-        $this->belongsToMany(Level::class);
+        return $this->belongsToMany(Level::class);
     }
 
     public function venues()

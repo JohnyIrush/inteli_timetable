@@ -17,60 +17,52 @@ class TeacherSeeder extends Seeder
         Teacher::truncate();
 
         Teacher::create([
-            'teacher' => 'Mathematics',
+            'teacher' => 'Chepkuon',
             'level_id' => 2,
             'department_id' => 1,
-            'subject_id' => 1,
         ]);
 
 
         Teacher::create([
-            'teacher' => 'Chemistry',
+            'teacher' => 'Walter White',
             'level_id' => 2,
             'department_id' => 2,
-            'subject_id' => 2,
         ]);
 
         Teacher::create([
-            'teacher' => 'Physics',
+            'teacher' => 'Laurence Krauss',
             'level_id' => 2,
             'department_id' => 2,
-            'subject_id' => 3,
         ]);
 
         Teacher::create([
-            'teacher' => 'Computer Studies',
+            'teacher' => 'Abdul Bari',
             'level_id' => 2,
             'department_id' => 3,
-            'subject_id' => 4,
         ]);
 
         Teacher::create([
-            'teacher' => 'Biology',
+            'teacher' => 'Richard Dawkins',
             'level_id' => 2,
             'department_id' => 2,
-            'subject_id' => 5,
         ]);
 
         Teacher::create([
-            'teacher' => 'Geography',
+            'teacher' => 'Neil deGrasse ',
             'level_id' => 2,
             'department_id' => 4,
-            'subject_id' => 6,
         ]);
 
         Teacher::create([
-            'teacher' => 'Psychology',
+            'teacher' => 'Dr. Paul Dobransky',
             'level_id' => 2,
             'department_id' => 2,
-            'subject_id' => 7,
         ]);
 
         Teacher::create([
-            'teacher' => 'Music',
+            'teacher' => 'Eminem',
             'level_id' => 2,
             'department_id' => 5,
-            'subject_id' => 8,
         ]);
     }
 }

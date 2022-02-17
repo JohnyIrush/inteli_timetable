@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Level;
 use App\Models\Stream;
 use Illuminate\Database\Seeder;
 
@@ -17,22 +18,18 @@ class StreamSeeder extends Seeder
         Stream::truncate();
 
         Stream::create([
-            'stream' => 'Purple',
-            'level_id' => 1,
-            'venue_id' => 1
-        ]);
+            'stream' => 'Purple',        ]);
 
         Stream::create([
-            'stream' => 'Pink',
-            'level_id' => 1,
-            'venue_id' => 1
-        ]);
+            'stream' => 'Pink',        ]);
 
         Stream::create([
-            'stream' => 'Violet',
-            'level_id' => 1,
-            'venue_id' => 1
-        ]);
+            'stream' => 'Violet',        ]);
 
+        foreach(Stream::all() as $stream)
+        {
+            $stream->levels()->attach(Level::all());
+        }
     }
+
 }

@@ -17,7 +17,7 @@ class VenueController extends Controller
      */
     public function venues()
     {
-        return Venue::all();
+        return Venue::with("levels")->get();
     }
 
     /**

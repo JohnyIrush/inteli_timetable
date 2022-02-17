@@ -17,7 +17,6 @@ class CreateTeachersTable extends Migration
             $table->id();
             $table->text("teacher");
             $table->text("department_id");
-            $table->text("subject_id");
             $table->text("level_id");
             $table->timestamps();
         });

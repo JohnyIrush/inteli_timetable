@@ -16,7 +16,6 @@ class CreateDaySessionsTable extends Migration
         Schema::create('day_sessions', function (Blueprint $table) {
             $table->id();
             $table->text('session');
-            $table->text('day_id');
             $table->text('start');
             $table->text('end');
             $table->timestamps();

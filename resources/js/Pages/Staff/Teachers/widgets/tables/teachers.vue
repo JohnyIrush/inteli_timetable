@@ -27,10 +27,10 @@
                          {{ teacher.teacher }}
                       </td>
                       <td>
-                        {{ teacher.department_id }}
+                         <p v-for="department in teacher.department" :index="index">{{ department.department }},</p>
                       </td>
                       <td>
-                        {{ teacher.subject_id }}
+                        <p v-for="subject in teacher.subjects" :index="index">{{ subject.subject }},</p>
                       </td>
                       <td class="align-middle">
                         {{ teacher.level_id }}

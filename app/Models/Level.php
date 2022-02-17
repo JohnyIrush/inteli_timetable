@@ -12,7 +12,7 @@ class Level extends Model
 
     public function venues()
     {
-        $this->hasMany(Venue::class);
+        return $this->belongsToMany(Venue::class);
     }
 
     public function streams()
@@ -23,5 +23,10 @@ class Level extends Model
     public function teachers()
     {
         $this->hasMany(Teacher::class);
+    }
+
+    public function subjects()
+    {
+        $this->hasManyThrough(Subject::class,Teacher::class);
     }
 }

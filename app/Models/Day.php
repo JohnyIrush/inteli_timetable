@@ -11,6 +11,6 @@ class Day extends Model
 
     public function daySession()
     {
-        $this->hasMany(DaySession::class);
+        return $this->belongsToMany(DaySession::class);
     }
 }

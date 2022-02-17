@@ -16,7 +16,7 @@ class SubjectController extends Controller
      */
     public function subjects()
     {
-        return Subject::all();
+        return Subject::with(['teachers','levels','department'])->get();
     }
 
     /**

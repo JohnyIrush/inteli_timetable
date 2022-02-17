@@ -16,7 +16,7 @@ class TeacherController extends Controller
      */
     public function teachers()
     {
-        return Teacher::all();
+        return Teacher::with('subjects','department')->get();
     }
 
     /**

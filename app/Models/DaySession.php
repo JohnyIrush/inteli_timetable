@@ -11,6 +11,6 @@ class DaySession extends Model
 
     public function day()
     {
-        $this->belongsToMany(Day::class);
+        return $this->belongsToMany(Day::class);
     }
 }

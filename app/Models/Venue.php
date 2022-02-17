@@ -12,12 +12,12 @@ class Venue extends Model
 
     public function levels()
     {
-        $this->belongsToMany(Level::class);
+        return $this->belongsToMany(Level::class);
     }
 
     public function streams()
     {
-        $this->belongsToMany(Streams::class);
+        return $this->belongsToMany(Streams::class);
     }
 
 }

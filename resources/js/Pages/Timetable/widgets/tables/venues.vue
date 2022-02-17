@@ -26,7 +26,7 @@
                         {{ venue.venue }}
                       </td>
                       <td class="align-middle text-center text-sm">
-                         {{ venue.level_id }}
+                        <p v-for="level in venue.levels" :index="index">{{ level.level }},</p>
                       </td>
                       <td class="align-middle">
                         {{ venue.location }}

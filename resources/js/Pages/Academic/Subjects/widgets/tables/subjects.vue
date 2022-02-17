@@ -27,13 +27,13 @@
                         {{ subject.subject }}
                       </td>
                       <td class="align-middle">
-                        {{ subject.department_id}}
+                        <p v-for="department in subject.department" :index="index">{{ department.department }},</p>
                       </td>
                       <td class="align-middle text-center text-sm">
-                         {{ subject.teacher_id }}
+                         <p v-for="teacher in subject.teachers" :index="index">{{ teacher.teacher }},</p>
                       </td>
                       <td class="align-middle">
-                        {{ subject.level_id }}
+                        <p v-for="level in subject.levels" :index="index">{{ level.level }},</p>
                       </td>
                       <td class="align-middle">
                        <div class="col-lg-6 col-5 my-auto text-end">

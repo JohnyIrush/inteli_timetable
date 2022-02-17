@@ -11,22 +11,22 @@ class Teacher extends Model
 
     public function levels()
     {
-        $this->hasMany(Level::class);
+        return $this->belongsToMany(Level::class);
     }
 
 
     public function streams()
     {
-        $this->hasMany(Stream::class);
+       return  $this->hasMany(Stream::class);
     }
 
     public function subjects()
     {
-        $this->hasMany(Subject::class);
+        return $this->belongsToMany(Subject::class);
     }
 
-    public function departments()
+    public function department()
     {
-        $this->belongsTo(Department::class);
+        //return $this->hasManyThrough(Department::class,Subject::class);
     }
 }

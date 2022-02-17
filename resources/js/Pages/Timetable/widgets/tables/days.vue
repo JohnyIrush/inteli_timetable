@@ -27,7 +27,7 @@
                         {{ day.day }}
                       </td>
                       <td>
-                        <p>{{ day.day_session_id }}</p>
+                        <p v-for="session in day.day_session" :index="index">{{ session.session }}</p>
                       </td>
                       <td class="align-middle text-center text-sm">
                         {{ day.start }}

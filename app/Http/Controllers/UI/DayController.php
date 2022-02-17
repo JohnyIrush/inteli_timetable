@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Day;
 use App\Http\Requests\StoreDayRequest;
 use App\Http\Requests\UpdateDayRequest;
+use App\Models\DaySession;
 
 class DayController extends Controller
 {
@@ -16,6 +17,6 @@ class DayController extends Controller
      */
     public function days()
     {
-        return Day::all();
+        return Day::with('daySession')->get();
     }
 }

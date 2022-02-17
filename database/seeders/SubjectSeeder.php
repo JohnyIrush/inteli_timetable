@@ -2,8 +2,13 @@
 
 namespace Database\Seeders;
 
+use App\Models\Department;
+use App\Models\Level;
 use App\Models\Subject;
+use App\Models\Teacher;
+use App\Models\SubjectTeacher;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class SubjectSeeder extends Seeder
 {
@@ -14,63 +19,67 @@ class SubjectSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('subject_teacher')->truncate();
+        DB::table('department_subject')->truncate();
         Subject::truncate();
 
         Subject::create([
-            'subject' => 'Mathematics',
-            'teacher_id' => 1,
-            'level_id' => 1,
-            'department_id' => 1,
+            'subject' => 'Mathematics'
         ]);
 
 
         Subject::create([
-            'subject' => 'Chemistry',
-            'teacher_id' => 2,
-            'level_id' => 3,
-            'department_id' => 2,
+            'subject' => 'Chemistry'
+            
         ]);
 
         Subject::create([
-            'subject' => 'Physics',
-            'teacher_id' => 3,
-            'level_id' => 1,
-            'department_id' => 2,
+            'subject' => 'Physics'
+            
         ]);
 
         Subject::create([
-            'subject' => 'Computer Studies',
-            'teacher_id' => 4,
-            'level_id' => 4,
-            'department_id' => 3,
+            'subject' => 'Computer Studies'
+            
         ]);
 
         Subject::create([
-            'subject' => 'Biology',
-            'teacher_id' => 5,
-            'level_id' => 2,
-            'department_id' => 2,
+            'subject' => 'Biology'
+            
         ]);
 
         Subject::create([
-            'subject' => 'Geography',
-            'teacher_id' => 6,
-            'level_id' => 1,
-            'department_id' => 4,
+            'subject' => 'Geography'
+            
         ]);
 
         Subject::create([
-            'subject' => 'Psychology',
-            'teacher_id' => 7,
-            'level_id' => 3,
-            'department_id' => 2,
+            'subject' => 'Psychology'
+            
         ]);
 
         Subject::create([
-            'subject' => 'Music',
-            'teacher_id' => 8,
-            'level_id' => 1,
-            'department_id' => 5,
+            'subject' => 'Music'
+        ,
         ]);
+
+        for($i = 1; $i < sizeof(Subject::all());)
+        {
+            for($j = 1; $j <= sizeof(Teacher::all()); $j++)
+            {
+                Subject::find($i)->teachers()->attach(Teacher::find($j));
+                $i++;
+            }
+        }
+
+        for($j = 1; $j <= sizeof(Subject::all()); $j++)
+        {
+            Subject::find($j)->department()->attach(Department::all()->random());
+        }
+
+        for($j = 1; $j <= sizeof(Subject::all()); $j++)
+        {
+            Subject::find($j)->levels()->attach(Level::all());
+        }
     }
 }

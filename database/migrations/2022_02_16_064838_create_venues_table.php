@@ -17,8 +17,6 @@ class CreateVenuesTable extends Migration
             $table->id();
             $table->text("venue");
             $table->text("location");
-            $table->integer("level_id");
-            $table->integer("stream_id");
             $table->timestamps();
         });
     }
