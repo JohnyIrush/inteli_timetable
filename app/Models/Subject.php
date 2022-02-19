@@ -23,4 +23,9 @@ class Subject extends Model
     {
         return $this->belongsToMany(Level::class);
     }
+
+    public function venue()
+    {
+        return $this->hasOne(Venue::class);
+    }
 }

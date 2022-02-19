@@ -19,24 +19,66 @@ class VenueSeeder extends Seeder
         Venue::truncate();
 
         Venue::create([
-            'venue' => 'Form One Room',
+            'venue' => 'Form One Room purple',
             'location' => (string)rand(500000,10000000),
         ]);
 
         Venue::create([
-            'venue' => 'Form Two Room',
+            'venue' => 'Form Two Room purple',
             'location' => (string)rand(500000,10000000),
         ]);
 
         Venue::create([
-            'venue' => 'Form Three Room',
+            'venue' => 'Form Three Room purple',
             'location' => (string)rand(500000,10000000),
         ]);
 
         Venue::create([
-            'venue' => 'Form Four Room',
+            'venue' => 'Form Four Room purple',
             'location' => (string)rand(500000,10000000),
         ]);
+
+
+        Venue::create([
+            'venue' => 'Form One Room pink',
+            'location' => (string)rand(500000,10000000),
+        ]);
+
+        Venue::create([
+            'venue' => 'Form Two Room pink',
+            'location' => (string)rand(500000,10000000),
+        ]);
+
+        Venue::create([
+            'venue' => 'Form Three Room pink',
+            'location' => (string)rand(500000,10000000),
+        ]);
+
+        Venue::create([
+            'venue' => 'Form Four Room pink',
+            'location' => (string)rand(500000,10000000),
+        ]);
+
+        Venue::create([
+            'venue' => 'Form One Room Violet',
+            'location' => (string)rand(500000,10000000),
+        ]);
+
+        Venue::create([
+            'venue' => 'Form Two Room Violet',
+            'location' => (string)rand(500000,10000000),
+        ]);
+
+        Venue::create([
+            'venue' => 'Form Three Room Violet',
+            'location' => (string)rand(500000,10000000),
+        ]);
+
+        Venue::create([
+            'venue' => 'Form Four Room Violet',
+            'location' => (string)rand(500000,10000000),
+        ]);
+        
 
         Venue::create([
             'venue' => 'Chemistry Lab',
@@ -70,7 +112,7 @@ class VenueSeeder extends Seeder
 
         foreach(Level::all() as $level)
         {
-            $level->venues()->attach(Venue::inRandomOrder()->take(rand(1,3))->pluck('id'));
+            $level->venues()->attach(Venue::inRandomOrder()->take(rand(1,4))->pluck('id'));
         }
     }
 }

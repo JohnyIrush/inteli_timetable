@@ -27,7 +27,7 @@
                          {{ teacher.teacher }}
                       </td>
                       <td>
-                         <p v-for="department in teacher.department" :index="index">{{ department.department }},</p>
+                         <p>{{ teacher.department.department }}</p>
                       </td>
                       <td>
                         <p v-for="subject in teacher.subjects" :index="index">{{ subject.subject }},</p>

@@ -9,6 +9,10 @@ class Level extends Model
 {
     use HasFactory;
 
+    public function teachers()
+    {
+        return $this->belongsToMany(Teacher::class);
+    }
 
     public function venues()
     {
@@ -17,16 +21,11 @@ class Level extends Model
 
     public function streams()
     {
-        $this->hasMany(Stream::class);
-    }
-
-    public function teachers()
-    {
-        $this->hasMany(Teacher::class);
+        return $this->belongsToMany(Stream::class);
     }
 
     public function subjects()
     {
-        $this->hasManyThrough(Subject::class,Teacher::class);
+        return $this->hasManyThrough(Subject::class,Teacher::class);
     }
 }

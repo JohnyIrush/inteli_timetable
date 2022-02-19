@@ -2,8 +2,14 @@
 
 namespace Database\Seeders;
 
+use App\Models\Level;
+use App\Models\LevelStream;
+use App\Models\LevelStreamTeacher;
+use App\Models\LevelTeacher;
+use App\Models\Stream;
 use App\Models\Teacher;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class TeacherSeeder extends Seeder
 {
@@ -15,6 +21,8 @@ class TeacherSeeder extends Seeder
     public function run()
     {
         Teacher::truncate();
+
+        DB::table('level_teacher')->truncate();
 
         Teacher::create([
             'teacher' => 'Chepkuon',
@@ -64,5 +72,15 @@ class TeacherSeeder extends Seeder
             'level_id' => 2,
             'department_id' => 5,
         ]);
+
+        foreach(Teacher::all() as $teacher)
+        {
+            $teacher->levels()->attach(Level::inRandomOrder()->take(rand(1,3))->pluck('id'));
+        }
+
+        foreach(Teacher::all() as $teacher)
+        {
+            $teacher->streams()->attach(Stream::inRandomOrder()->take(rand(1,3))->pluck('id'));
+        }
     }
 }

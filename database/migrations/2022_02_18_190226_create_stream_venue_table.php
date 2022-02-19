@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLevelStreamTable extends Migration
+class CreateStreamVenueTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateLevelStreamTable extends Migration
      */
     public function up()
     {
-        Schema::create('level_stream', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('level_id')->constrained();
+        Schema::create('stream_venue', function (Blueprint $table) {
+            $table->foreignId('venue_id')->constrained();
             $table->foreignId('stream_id')->constrained();
-            $table->foreignId('venue_id')->nullable();
         });
     }
 
@@ -28,6 +26,6 @@ class CreateLevelStreamTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('level_stream');
+        Schema::dropIfExists('stream_venue');
     }
 }

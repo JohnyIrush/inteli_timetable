@@ -1,13 +1,39 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\UI;
 
+use App\Http\Controllers\Controller;
 use App\Models\Level;
 use App\Http\Requests\StoreLevelRequest;
 use App\Http\Requests\UpdateLevelRequest;
+use App\Models\Teacher;
 
 class LevelController extends Controller
 {
+    public function levels()
+    {
+        foreach(Teacher::with('levels')->get() as $teacher)
+        {
+            $levels = $teacher->levels;
+            #return response()->json($levels);
+            #return response()->json($levels->levels);
+            foreach($levels as $level)
+            {
+                foreach (Level::find($level->id)->with('streams')->get() as $streams)
+                {
+                    $arr = [];
+                    return response()->json(Level::find($level->id)->with('streams')->get());
+                    $streams = isset($streams->streams)? $streams->streams : [];
+                    foreach ($streams as $stream)
+                    {
+                        array_push($arr, $stream->id);
+                    }
+                 
+                    Teacher::find($teacher->id)->streams()->attach(array_rand($arr, 2));
+                }
+            }
+        } 
+    }
     /**
      * Display a listing of the resource.
      *

@@ -3,6 +3,7 @@
 use App\Http\Controllers\UI\AcademicController;
 use App\Http\Controllers\UI\DayController;
 use App\Http\Controllers\UI\DaySessionController;
+use App\Http\Controllers\UI\LevelController;
 use App\Http\Controllers\UI\SubjectController;
 use App\Http\Controllers\UI\TeacherController;
 use App\Http\Controllers\UI\TimetableController;
@@ -36,7 +37,13 @@ Route::get('/academic', [AcademicController::class, 'academic'])->name('academic
 */
 
 Route::get('/timetable', [TimetableController::class, 'timetable'])->name('timetable');
+Route::get('/tables', [TimetableController::class, 'tables'])->name('tables');
+/**
+ * Timetable generator plugin
+*/
 
+Route::get('/lessons', [TimetableController::class, 'lessons'])->name('lessons');
+Route::get('/levels', [LevelController::class, 'levels'])->name('levels');
 
 /***
  * Timetable Variables
@@ -45,6 +52,7 @@ Route::get('/timetable', [TimetableController::class, 'timetable'])->name('timet
 Route::get('/days', [DayController::class, 'days'])->name('days');
 Route::get('/daysession', [DaySessionController::class, 'daySession'])->name('daysession');
 Route::get('/venues', [VenueController::class, 'venues'])->name('venues');
+
 
 /**
  * Academics Module Routes

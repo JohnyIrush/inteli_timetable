@@ -9,6 +9,11 @@ class Teacher extends Model
 {
     use HasFactory;
 
+    public function subjects()
+    {
+        return $this->belongsToMany(Subject::class);
+    }
+
     public function levels()
     {
         return $this->belongsToMany(Level::class);
@@ -17,16 +22,19 @@ class Teacher extends Model
 
     public function streams()
     {
-       return  $this->hasMany(Stream::class);
-    }
-
-    public function subjects()
-    {
-        return $this->belongsToMany(Subject::class);
+       return  $this->belongsToMany(Stream::class);
     }
 
     public function department()
     {
-        //return $this->hasManyThrough(Department::class,Subject::class);
+        return $this->belongsTo(Department::class);
     }
+
+    /*
+    public function levelStream()
+    {
+        return $this->belongsToMany(LevelStream::class);
+    }
+    */
+
 }

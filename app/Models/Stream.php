@@ -23,4 +23,9 @@ class Stream extends Model
     {
         $this->hasMany(Teacher::class);
     }
+
+    public function venue()
+    {
+        $this->hasOne(Venue::class);
+    }
 }
