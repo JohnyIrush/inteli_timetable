@@ -18,18 +18,14 @@ class StreamSeeder extends Seeder
         Stream::truncate();
 
         Stream::create([
-            'stream' => 'Purple',        ]);
+            'stream' => 'Purple',        
+        ]);
 
         Stream::create([
-            'stream' => 'Pink',        ]);
+            'stream' => 'Pink',        
+        ]);
 
-        Stream::create([
-            'stream' => 'Violet',        ]);
 
-        foreach(Stream::all() as $stream)
-        {
-            $stream->levels()->attach(Level::all());
-        }
     }
 
 }

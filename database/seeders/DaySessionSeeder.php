@@ -22,7 +22,7 @@ class DaySessionSeeder extends Seeder
         DaySession::create([
             'session' => 'Morning',
             'type' => 'lesson',
-            'start' => '7:30am',
+            'start' => '7:50am',
             'end' => '9:50am',
         ]);
     

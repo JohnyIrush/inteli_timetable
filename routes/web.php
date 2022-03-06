@@ -38,6 +38,10 @@ Route::get('/academic', [AcademicController::class, 'academic'])->name('academic
 
 Route::get('/timetable', [TimetableController::class, 'timetable'])->name('timetable');
 Route::get('/tables', [TimetableController::class, 'tables'])->name('tables');
+Route::get('/tests', [TimetableController::class, 'tests'])->name('tests');
+Route::get('/sessions', [TimetableController::class, 'sessions'])->name('sessions');
+Route::get('/selectedVenues', [TimetableController::class, 'selectedVenues'])->name('selectedVenues');
+
 /**
  * Timetable generator plugin
 */

@@ -30,11 +30,14 @@ class Teacher extends Model
         return $this->belongsTo(Department::class);
     }
 
-    /*
-    public function levelStream()
+    /**
+     * Get all of the sections for the Teacher
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasManyThrough
+     */
+    public function sections(): HasManyThrough
     {
-        return $this->belongsToMany(LevelStream::class);
+        return $this->hasManyThrough(Section::class, Level::class);
     }
-    */
 
 }

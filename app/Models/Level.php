@@ -14,18 +14,24 @@ class Level extends Model
         return $this->belongsToMany(Teacher::class);
     }
 
+    /**
+     * Get all of the venues for the Level
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasManyThrough
+     */
+    
     public function venues()
     {
-        return $this->belongsToMany(Venue::class);
+        return $this->hasManyThrough(Venue::class, Section::class);
     }
-
-    public function streams()
+    
+    public function sections()
     {
-        return $this->belongsToMany(Stream::class);
+        return $this->hasMany(Section::class);
     }
 
     public function subjects()
     {
-        return $this->hasManyThrough(Subject::class,Teacher::class);
+        return $this->belongsToMany(Subject::class);
     }
 }

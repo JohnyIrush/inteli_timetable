@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
             VenueSeeder::class,
             DaySeeder::class,
             DaySessionSeeder::class,
+            SectionSeeder::class,
             ]
         );
     }

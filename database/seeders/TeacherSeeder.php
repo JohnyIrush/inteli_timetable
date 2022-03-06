@@ -75,7 +75,7 @@ class TeacherSeeder extends Seeder
 
         foreach(Teacher::all() as $teacher)
         {
-            $teacher->levels()->attach(Level::inRandomOrder()->take(rand(1,3))->pluck('id'));
+            $teacher->levels()->attach(Level::all());
         }
 
         foreach(Teacher::all() as $teacher)

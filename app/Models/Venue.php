@@ -9,7 +9,7 @@ class Venue extends Model
 {
     use HasFactory;
 
-
+    /*
     public function levels()
     {
         return $this->belongsToMany(Level::class);
@@ -19,5 +19,6 @@ class Venue extends Model
     {
         return $this->belongsToMany(Streams::class);
     }
+    */
 
 }

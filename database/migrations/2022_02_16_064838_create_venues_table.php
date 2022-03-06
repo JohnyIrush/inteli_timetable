@@ -17,6 +17,8 @@ class CreateVenuesTable extends Migration
             $table->id();
             $table->text("venue");
             $table->text("location");
+            $table->integer('section_id')->nullable();
+            $table->integer('subject_id')->nullable();
             $table->timestamps();
         });
     }

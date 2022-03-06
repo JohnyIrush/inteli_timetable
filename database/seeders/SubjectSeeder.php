@@ -25,65 +25,57 @@ class SubjectSeeder extends Seeder
 
         Subject::create([
             'subject' => 'Mathematics',
-            'venue_id' => null,
             'duration' => 40,
-            'lessons' => 0
+            'lessons' => 0,
         ]);
 
 
         Subject::create([
             'subject' => 'Chemistry',
-            'venue_id' => 5,
             'duration' => 40,
-            'lessons' => 0
+            'lessons' => 0,
             
         ]);
 
         Subject::create([
             'subject' => 'Physics',
-            'venue_id' => 6,
             'duration' => 40,
-            'lessons' => 0
+            'lessons' => 0,
             
         ]);
 
         Subject::create([
             'subject' => 'Computer Studies',
-            'venue_id' => 9,
             'duration' => 40,
-            'lessons' => 0
+            'lessons' => 0,
             
         ]);
 
         Subject::create([
             'subject' => 'Biology',
-            'venue_id' => 7,
             'duration' => 40,
-            'lessons' => 0
+            'lessons' => 0,
         ]);
 
         Subject::create([
             'subject' => 'Geography',
-            'venue_id' => null,
             'duration' => 40,
-            'lessons' => 0
+            'lessons' => 0,
             
         ]);
 
         Subject::create([
             'subject' => 'Psychology',
-            'venue_id' => null,
             'duration' => 40,
-            'lessons' => 0
+            'lessons' => 0,
             
         ]);
 
         Subject::create([
             'subject' => 'Music',
-            'venue_id' => 10,
             'duration' => 40,
-            'lessons' => 0
-        ,
+            'lessons' => 0,
+    
         ]);
 
         for($i = 1; $i < sizeof(Subject::all());)
